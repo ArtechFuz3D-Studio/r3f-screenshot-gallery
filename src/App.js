@@ -9,8 +9,8 @@ function Image(props) {
   const group = useRef()
   const data = useScroll()
   useFrame((state, delta) => {
-    group.current.position.z = THREE.MathUtils.damp(group.current.position.z, Math.max(0, data.delta * 50), 4, delta)
-    ref.current.material.grayscale = THREE.MathUtils.damp(ref.current.material.grayscale, Math.max(0, 1 - data.delta * 1000), 4, delta)
+    group.current.position.z = THREE.MathUtils.damp(group.current.position.z, Math.max(0, data.delta * 100), 4, delta)
+    ref.current.material.grayscale = THREE.MathUtils.damp(ref.current.material.grayscale, Math.max(0, 1 - data.delta * 60000), 4, delta)
   })
   return (
     <group ref={group}>
@@ -35,31 +35,32 @@ function Pages() {
   const { width } = useThree((state) => state.viewport)
   return (
     <>
-      <Page position={[-width * 1, 0, 0]} urls={['/trip1.jpg', '/trip2.jpg', '/trip3.jpg']} />
-      <Page position={[width * 0, 0, 0]} urls={['/img1.jpg', '/img2.jpg', '/img3.jpg']} />
-      <Page position={[width * 1, 0, 0]} urls={['/img4.jpg', '/img5.jpg', '/img6.jpg']} />
-      <Page position={[width * 2, 0, 0]} urls={['/trip1.jpg', '/trip2.jpg', '/trip3.jpg']} />
-      <Page position={[width * 3, 0, 0]} urls={['/img1.jpg', '/img2.jpg', '/img3.jpg']} />
-      <Page position={[width * 4, 0, 0]} urls={['/img4.jpg', '/img5.jpg', '/img6.jpg']} />
+      <Page position={[-width * 1, 0, 0]} urls={['/119.png', '/435.png', '/707.png']} />
+      <Page position={[width * 0, 0, 0]} urls={['/808.png', '/955.png', '/LeCl1.png']} />
+      <Page position={[width * 1, 0, 0]} urls={['/redcbul.png', '/F120.png', '/LeSafetyCar.png']} />
+      <Page position={[width * 2, 0, 0]} urls={['/119.png', '/435.png', '/707.png']} />
+      <Page position={[width * 3, 0, 0]} urls={['/808.png', '/955.png', '/LeCl1.png']} />
+      <Page position={[width * 4, 0, 0]} urls={['/redcbul.png', '/F120.png', '/LeSafetyCar.png']} />
+      <Page position={[width * 5, 0, 0]} urls={['/redcbul.png', '/F120.png', '/LeSafetyCar.png']} />
     </>
   )
 }
 
 export default function App() {
   return (
-    <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
+    <Canvas gl={{ antialias: false }} dpr={[1, 3]}>
       <Suspense fallback={null}>
-        <ScrollControls infinite horizontal damping={4} pages={4} distance={1}>
+        <ScrollControls infinite horizontal damping={8} pages={6} distance={1}>
           <Scroll>
             <Pages />
           </Scroll>
           <Scroll html>
-            <h1 style={{ position: 'absolute', top: '20vh', left: '-75vw' }}>home</h1>
-            <h1 style={{ position: 'absolute', top: '20vh', left: '25vw' }}>to</h1>
-            <h1 style={{ position: 'absolute', top: '20vh', left: '125vw' }}>be</h1>
-            <h1 style={{ position: 'absolute', top: '20vh', left: '225vw' }}>home</h1>
-            <h1 style={{ position: 'absolute', top: '20vh', left: '325vw' }}>to</h1>
-            <h1 style={{ position: 'absolute', top: '20vh', left: '425vw' }}>be</h1>
+            <h1 style={{ position: 'absolute', top: '15vh', left: '75vw' }}>F1</h1>
+            <h1 style={{ position: 'absolute', top: '35vh', left: '125vw' }}>2020</h1>
+            <h1 style={{ position: 'absolute', top: '45vh', left: '225vw' }}>screenshot</h1>
+            <h1 style={{ position: 'absolute', top: '15vh', left: '375vw' }}>art</h1>
+            <h1 style={{ position: 'absolute', top: '50vh', left: '425vw' }}>by</h1>
+            <h1 style={{ position: 'absolute', top: '25vh', left: '475vw' }}>Hui.T</h1>
           </Scroll>
         </ScrollControls>
         <Preload />
