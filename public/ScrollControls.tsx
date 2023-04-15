@@ -83,7 +83,7 @@ export function ScrollControls({
     el.style.position = 'absolute'
     el.style.width = '100%'
     el.style.height = '100%'
-    el.style[horizontal ? 'overflowX' : 'overflowY'] = 'auto'
+    el.style[horizontal ? 'overflowX' : 'overflowY'] = 'hidden'
     el.style.top = '0px'
     el.style.left = '0px'
 
@@ -160,9 +160,8 @@ const ScrollHtml = React.forwardRef(
     const fiberState = React.useContext(fiberContext)
     useFrame(() => {
       if (state.delta > state.eps) {
-        group.current.style.transform = `translate3d(${state.horizontal ? -width * (state.pages - 1) * state.offset : 0}px,${
-          state.horizontal ? 0 : height * (state.pages - 1) * -state.offset
-        }px,0)`
+        group.current.style.transform = `translate3d(${state.horizontal ? -width * (state.pages - 1) * state.offset : 0}px,${state.horizontal ? 0 : height * (state.pages - 1) * -state.offset
+          }px,0)`
       }
     })
     ReactDOM.render(
