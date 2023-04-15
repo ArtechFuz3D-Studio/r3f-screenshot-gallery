@@ -10,7 +10,7 @@ function Overlay() {
         F1 2020 Screenshot Art Gallery - Studio Huit
       </a>
       <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '48px' }}>Studio Huit</div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>10/06/2022</div>
+      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>04-2023</div>
     </div>
   )
 }
