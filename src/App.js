@@ -48,9 +48,9 @@ function Pages() {
 
 export default function App() {
   return (
-    <Canvas gl={{ antialias: false }} dpr={[1, 3]}>
+    <Canvas gl={{ antialias: true }} dpr={[1, 8]}>
       <Suspense fallback={null}>
-        <ScrollControls infinite horizontal damping={8} pages={6} distance={1}>
+        <ScrollControls infinite horizontal damping={0.8} pages={6} distance={1}>
           <Scroll>
             <Pages />
           </Scroll>
@@ -59,8 +59,8 @@ export default function App() {
             <h1 style={{ position: 'absolute', top: '35vh', left: '125vw' }}>2020</h1>
             <h1 style={{ position: 'absolute', top: '45vh', left: '225vw' }}>screenshot</h1>
             <h1 style={{ position: 'absolute', top: '15vh', left: '375vw' }}>art</h1>
-            <h1 style={{ position: 'absolute', top: '50vh', left: '425vw' }}>by</h1>
-            <h1 style={{ position: 'absolute', top: '25vh', left: '475vw' }}>Hui.T</h1>
+            <h1 style={{ position: 'absolute', top: '50vh', left: '425vw' }}>Studio</h1>
+            <h1 style={{ position: 'absolute', top: '25vh', left: '475vw' }}>Huit</h1>
           </Scroll>
         </ScrollControls>
         <Preload />
