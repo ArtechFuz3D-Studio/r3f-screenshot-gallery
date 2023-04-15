@@ -1,11 +1,16 @@
 {
   "name": "screenshot-gallery-studiohuit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Screenshot gallery with infinite horizontal scroll.",
   "keywords": [
     "horizontal",
     "scrollcontrols",
-    "infinite"
+    "infinite",
+    "screenshot",
+    "gallery",
+    "studiohuit",
+    "formula1",
+    "electronicarts"
   ],
   "main": "src/index.js",
   "dependencies": {
