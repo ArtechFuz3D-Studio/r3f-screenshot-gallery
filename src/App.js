@@ -36,10 +36,10 @@ function Pages() {
   return (
     <>
       <Page position={[-width * 1, 0, 0]} urls={['/119.png', '/435.png', '/707.png']} />
-      <Page position={[width * 0, 0, 0]} urls={['/808.png', '/955.png', '/LeCl1.png']} />
+      <Page position={[width * 0, 0, 0]} urls={['/808.png', '/119.png', '/LeCl1.png']} />
       <Page position={[width * 1, 0, 0]} urls={['/redcbul.png', '/F120.png', '/LeSafetyCar.png']} />
       <Page position={[width * 2, 0, 0]} urls={['/119.png', '/435.png', '/707.png']} />
-      <Page position={[width * 3, 0, 0]} urls={['/808.png', '/955.png', '/LeCl1.png']} />
+      <Page position={[width * 3, 0, 0]} urls={['/808.png', '/119.png', '/LeCl1.png']} />
       <Page position={[width * 4, 0, 0]} urls={['/redcbul.png', '/F120.png', '/LeSafetyCar.png']} />
       <Page position={[width * 5, 0, 0]} urls={['/redcbul.png', '/F120.png', '/LeSafetyCar.png']} />
     </>

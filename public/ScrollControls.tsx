@@ -83,13 +83,15 @@ export function ScrollControls({
     el.style.position = 'absolute'
     el.style.width = '100%'
     el.style.height = '100%'
-    el.style[horizontal ? 'overflowX' : 'overflowY'] = 'hidden'
+    el.style[horizontal ? 'overflowX' : 'overflowY'] = 'auto'
     el.style.top = '0px'
     el.style.left = '0px'
+
 
     fixed.style.position = 'sticky'
     fixed.style.top = '0px'
     fixed.style.left = '0px'
+
     el.appendChild(fixed)
 
     fill.style.height = horizontal ? '100%' : `${pages * distance * 100}%`
